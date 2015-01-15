@@ -1,25 +1,21 @@
 from sys import argv
 
-script, user_name, catName = argv
-user_input = '> ' 
+script, user_name = argv
+prompt = '> '
 
 print "Hi %s, I'm the %s script." % (user_name, script)
 print "I'd like to ask you a few questions."
 print "Do you like me %s?" % user_name
-likes = raw_input(user_input)
+likes = raw_input(prompt)
 
 print "Where do you live %s?" % user_name
-lives = raw_input(user_input)
+lives = raw_input(prompt)
 
-print "Who is %s?" % catName
-friend = raw_input(user_input)
-
-print "What type of computer do you have?"
-computer = raw_input(user_input)
+print "What kind of computer do you have?"
+computer = raw_input(prompt)
 
 print """
 Alright, so you said %r about liking me.
-You live in %r. Not sure where that is.
-%r is your %r. He sounds really cool!
-And you have a %r computer. Nice!
-""" % (likes, lives, catName, friend, computer)
+You live in %r.  Not sure where that is.
+And you have a %r computer.  Nice.
+""" % (likes, lives, computer)
